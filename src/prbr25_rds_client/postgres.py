@@ -73,3 +73,11 @@ class Postgres:
             df = read_sql(text(query), conn)
         logger.debug(f"Query on {table_name} successful, returned {df.shape[0]} rows")
         return df
+
+    def execute_update(self, query: str) -> int:
+        logger.info("Executing update query")
+        with self.engine.begin() as conn:
+            result = conn.execute(text(query))
+            rows_affected = result.rowcount
+        logger.debug(f"Query successful, {rows_affected} rows affected")
+        return rows_affected
