@@ -1,6 +1,6 @@
 [project]
 name = "prbr-rds-client"
-version = "0.2.0"
+version = "1.0.0"
 description = ""
 authors = [{ name = "Gabriel Medeiros", email = "gabrielspmedeiros@gmail.com" }]
 readme = "README.md"
